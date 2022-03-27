@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{ rose['Name'] }}</h1>
+
+<img class="right" src="{{ url_for('static', filename='images/' + rose['Image']) }}" alt="Picture of Rose">
+
+<p>{{ rose['Name'] }}, was introduced in {{ rose['Intro_Year'] }}.
+	Color: {{ rose['Color'] }}.
+	Plant Habit: {{ rose['Plant_Habit'] }}.
+  Growth Habit: {{ rose['Growth_Habit'] }}.
+  Bud Form: {{ rose['Bud_Form'] }}.
+  Size: {{ rose['Flower_Size'] }}.
+  Petal Count: {{ rose['Petal_Count'] }}.
+  Fragrant List: {{ rose['Fragrant_List'] }}.
+</p>
+
+<p><a href="{{ url_for('index') }}">Return to the list</a> to select a different rose.</p>
+
+{% endblock %}
